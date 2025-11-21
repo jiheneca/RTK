@@ -1,0 +1,63 @@
+.home-page {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.pagination {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pagination button {
+  padding: 10px 18px;
+  border: none;
+  background: #238636;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pagination button:disabled {
+  background: #3f3f3f;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #2ea043;
+}
+
+.loading-container,
+.error-container {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #3d3130;
+  border-top-color: #58a6ff;
+  animation: spin 1s linear infinite;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
